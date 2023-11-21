@@ -1,0 +1,407 @@
+LINUX DIRECTORY COMMANDS
+
+1. pwd command:-
+    The pwd command is used to display the location of the current working directory
+   
+    SYNTAX:-
+     pwd
+
+2. mkdir command:-
+    the mkdir command is used to create a new directory under any directory
+   
+      SYNTAX:-
+     mkdir<directory name>
+
+3. rmdir command:-
+    the emdir command is used to delete a directroy
+        
+    SYNTAX:-
+    rmdir<directory name>  
+
+4. Is command:-
+    the Is commad is used to display the list a content of a directory.
+ 
+    SYNTAX:-
+    Is
+
+
+5. cd command:-
+    the cd command is used ro change the current directory.
+     
+    SYNTAX:-
+    cd<directory name>
+
+
+ LINUX FILE COMMANDS
+
+6. touch command:-
+    the touch command is used to create empty files. We can create multiple empty files by executing   
+    it once.
+
+    SYNTAX:-
+    touch<file name>
+    touch<file1> <file2>......
+
+7. cat command:-
+    the cat command is a multi-purpose utility in the linux system. It can e used to create a file,  
+   display content of a file, copy the content of a one file to another file, and more.
+   
+   SYNTAX:-
+    cat><file  name>
+     // enter file content
+
+press “CTRL +D” keys to save a file. To display the content of the file, executes it as follows:
+   
+cat<file name>
+  
+8. rm command:-
+    the rm command is used to remove a file:
+
+   SYNTAX:-
+    rm<file name>
+
+
+9. cp command:-
+    to copy the same directory.
+   
+     SYNTAX:-
+     cp<existing file name><new file name>
+
+
+10. mv command:-
+      the mv command is used to move a file or a directory from one location to another.
+
+      SYNTAX:-
+      mv<file name><directory path>
+
+11. reneme command:-
+      the rename command is used to rename files. It is useful for a large group of files.
+
+      SYNTAX:-
+      rename’s/old-name/new-name/’files
+
+for example, to convert all the text files into pdf files, execute the below command:
+     
+     SYNTAX:-
+     renames’s/\.txt$/\.pdf/’*.txt
+
+12. head command:-
+      the head command is used to display the content of a file. It displays first 10 lines of a file.
+
+      SYNTAX:-
+      head<file name>
+
+13. tail command:
+      the tail command is similar to the head command. The difference between bith commands is                                
+      that it displays the last ten lines of the file content. It is useful for the reading the error message
+
+      SYNTAX:-
+      tail<file name>
+
+
+14. tac command:-
+      the tac command is the reverse of cat command, as its name specified. It displays the file 
+      content in reverse order (from the last line)
+      SYNTAX:-
+      tac<file name>
+
+15. more command:-
+      the more command is quite similar to the cat command, as it is used to display the file content in    
+     the same way that the cat command does. The only difference between both commands is that, in  
+     case of larger files, the more commads displays screenful output at a time.
+     
+     in more command, the following keys are used to scroll the page:
+    
+     ENTER key: to scroll down page by line.
+     
+     space bar: to move to the next page
+    
+     b key: to move to the pervious page
+
+     /key: to search the string.
+ 
+    
+     SYNTAX:-
+     more<file name>
+   
+LINUX USER COMMANDS
+
+
+16. less command:-
+      the less command is similar to the more command. It also includes some extrs features such as ‘adjustment in width  and height of the terminal’. Comparatively, the more command cuts the output in width of the terminal.
+
+      SYNTAX:-
+      less<file name>
+
+
+17. su command
+      the su command provides adminstrative access to another user. In other words, it alloes access of the linux shell to another user
+ 
+    SYNTAX:-
+    su<user name>
+
+18. id command:-
+      the id command is used to display the user ID (UID) and group ID(GID).
+ 
+     SYNTAX:-
+     id
+
+
+19.useradd command:-
+     the useradd command is used to add or remove a user on a linux server.
+
+  
+      SYNTAX:-
+      useradd username.
+20. passwd command:-
+      The passwd command is used to create and change the password for a user.
+
+     SYNTAX:-
+     passwd<username>
+
+
+21.groupadd command:-
+     the groupadd command is used to create a user group.
+ 
+     SYNTAX:-
+     groupadd<group name>
+
+
+    LINUX FILTER COMMANDS
+
+22. cat command:-
+      the cat command is also used as a filter. To filter a file, it is used inside pipes.
+
+      SYNTAX:-
+      cat<file name>|cat ot tac| cat or tac|....
+
+
+
+23.cut command:-
+     the cut command is used to select a specific column of a file. The ‘-d’ option is used as a 
+     delimiter and it can be  a space(‘ ’), a slash (/), a hyphen(-), or anything else. And, the ‘-f’ option   
+     is used to specify a column number.
+   
+     SYNTAX:-
+     -cut -d(delimiter) -f(column number)<file name>
+ 
+
+24. grep command:-
+      the grep command is the most powerful and user filter in a linux syste. The ‘ grep’ stands for the
+      “global regular expression print”. It is useful for searching the contant from a file. Generally it is 
+      used with pipe.
+
+    SYNTAX:-
+     command|grep<searchword>
+
+
+
+25. comm command:-
+      the ‘comm’ command is used to compare two files or streams. By default, it displays three 
+      columns, first displays non-matching items of the first file, second indicates the non-matching   
+      items of the second file, and the third column displays the matching items of both files
+
+
+      SYNTAX:-
+      comm<file1><file2>
+
+26. sed command
+      the sed command is also known as stream editor. It is used to edit files using a  regular expression. It does not permanently edit files; instead, the editor content remains only on display. It does not affect the actual file.
+
+      SYNTAX:-
+       command| sed’s/<oldword>/<newword>/’
+
+27. tee command
+      the tee command is quite similar to the cat command. The only difference between both filters is that it puts standard input output and also write them into a file
+
+       SYNTAX
+       cat<filename>|tee<newfile>|cat or tac|......
+
+
+28. tr command
+      the tr command is used to translate the file content like from lower case to upper case.
+
+      SYNTAX:-
+      command|tr<’old’><’new’>
+
+29. uniq command
+      the uniq command is used to form a sorted list in which every word will occur once.
+  
+      SYNTAX:-
+       command<filename>|uniq
+
+
+30. wc command
+       the wc command is used to count the lines, words, and the character in a file.
+
+       SYNTAX:-
+       wc<filename>
+
+
+31. od command
+       the od command is used to display the content of a file in different s, such as hexadecimal, octal, and  ASCII character.
+
+      SYNTAX:-
+      od -b<filename>    // octal format
+       od -t x1 <filename>   // hexa decimal format
+      od -c <filename>   // ASCII character format
+
+32. sort command
+      the sort command is used to sort files in alphabetical order.
+
+     SYNTAX:-
+    sort<file name>
+          
+       
+33. gzip command
+      the gzip command is used to truncate the file size. It is compressing tool . It replaces the original 
+      file by the compressed file having ‘.gz’ extension .
+       
+      
+      SYNTAX:-
+      gzip<file1><file2><file3>.....
+
+
+34. gunzip command
+      the gunzip command is used to decompress a file . It is a reverse operation of gzip command.
+
+      SYNTAX:-
+      gunzip<file1><file2><file3>....
+
+
+35. find command:
+      the find command is used to find a particular file within a diectory. It also supports various   
+      options to find a file such as byname, by type, by date, and more.
+
+       The following symbols are used after the find command:
+       
+       (.): for current directory name
+       (/): for root
+
+      SYNTAX:
+      find . -name”*.pdf”
+
+
+36. locate command:
+      the locate command is used to search a file by file name. It is quite similar to find command;
+      the difference is that it is a background process. It searches the file in the database, whereas the
+      find command searches in the file system. It is faster than find command. To find the file with 
+      locates command, keep your database updated.
+
+      SYNTAX:-
+       locate<filename>
+ 
+
+37. date command:
+      the date command is used to display date, time, timezone, and more...
+
+      SYNTAX:-
+      date
+
+
+38. cal command:
+      the cal command is used to display the current month’s calender with the current date 
+      highlighted.
+  
+
+   SYNTAX:-
+    cal<
+
+
+39. sleep command:
+      the sleep command is used to hold the terminal by thr specified amount of time.
+      By default, it takes time in seconds.
+
+      SYNTAX:-
+       sleep<time>
+
+
+40. time command:
+      the time command is used to display the time to execute a command.
+
+       SYNTAX:-
+       time
+
+
+41. zcat command:
+      the zcat command is used to display the compressed files.
+
+      SYNTAX:-
+       zcat<file name>
+
+    
+42.df command :
+     the df command is used to display the disk space used in the file system. It displays thr output as 
+     in number of used blocks, available blocks, and the mounted directory.
+
+     SYNTAX:-
+     df
+
+
+43. mount command:
+      the mount command is used to connect an external device file system to the system’s system.
+
+      SYNTAX:-
+      mount -t type<device><directory>
+
+
+
+44. exit command:
+      linux exit command is used  to exit from the current shell. It takes a parameter as a number and 
+      exits the shells with a return of status number. 
+ 
+      SYNTAX:-
+       exit
+
+      after pressing the ENTER KEY it will exit the terminal.
+
+
+45. clear command:
+      linux clear command is used to clear terminal screen.
+
+      SYNTAX:-
+      clear
+      after pressing the ENTER KEY, it will clear the terminal screen.
+
+
+LINUX NETWORKING COMMANDS
+
+
+46. ip command:
+      linux ip command is an updated version of the ipconfig command. It is used to assign an IP
+      adress, initialize an interface, disable an interface.
+
+      SYNTAX:-
+      ip a or ip addr
+
+
+
+47. ssh command:-
+      linux ssh command is used to create a remote connection through the ssh protocol.
+
+      SYNTAX:-
+      ssh user_name@host(IP/Domain_name)</p>
+
+
+
+48. mail command
+      the mail command is used to send emails from the command line.
+
+      SYNTAX:-
+      mail -s”subject”<recipient address>
+
+
+49. ping command:
+      the ping command is used to check the connectivity between two nodes, that is whether server is    
+      connected. It is a short form of “ packet internet groper.”
+
+     SYNTAX:-
+     ping<destination>
+
+
+50. host command:
+      the host command is used  to display the IP adress for a given domain name and vice versa.
+      It performs the DNS lookups for the DNS query.
+
+      SYNTAX:-
+      host<domain name>or<ip address>
